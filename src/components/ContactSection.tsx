@@ -44,27 +44,20 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const message = `
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Event: ${formData.eventType}
+Guests: ${formData.guests}
+Message: ${formData.message}
+  `;
 
-    toast({
-      title: "Enquiry Submitted!",
-      description: "We will get back to you within 24 hours.",
-    });
-
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      eventType: "",
-      guests: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+    const whatsappUrl = `https://wa.me/918545827620?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   const handleChange = (
