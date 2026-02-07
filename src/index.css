@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core brand colors */
+    --maroon: 0 100% 27%;
+    --maroon-dark: 0 100% 20%;
+    --saffron: 33 100% 50%;
+    --saffron-light: 33 100% 60%;
+    --gold: 51 100% 50%;
+    --gold-light: 51 100% 70%;
+    --forest: 120 61% 34%;
+    --forest-light: 120 61% 44%;
+    --cream: 40 33% 96%;
+    --cream-dark: 40 20% 90%;
+
+    /* Semantic tokens */
+    --background: 40 33% 96%;
+    --foreground: 0 100% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 100% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 100% 20%;
+
+    --primary: 0 100% 27%;
+    --primary-foreground: 40 33% 96%;
+
+    --secondary: 33 100% 50%;
+    --secondary-foreground: 0 100% 10%;
+
+    --muted: 40 20% 90%;
+    --muted-foreground: 0 20% 40%;
+
+    --accent: 51 100% 50%;
+    --accent-foreground: 0 100% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 0 100% 27%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 100% 27% / 0.95), hsl(0 100% 20% / 0.9));
+    --gradient-gold: linear-gradient(135deg, hsl(51 100% 50%), hsl(33 100% 50%));
+    --gradient-warm: linear-gradient(180deg, hsl(40 33% 96%), hsl(40 20% 90%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(0 100% 27% / 0.1);
+    --shadow-card: 0 8px 30px -4px hsl(0 100% 27% / 0.12);
+    --shadow-gold: 0 4px 20px -2px hsl(51 100% 50% / 0.3);
+
+    /* Sidebar - kept for compatibility */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 100% 5%;
+    --foreground: 40 33% 96%;
+
+    --card: 0 100% 8%;
+    --card-foreground: 40 33% 96%;
+
+    --popover: 0 100% 8%;
+    --popover-foreground: 40 33% 96%;
+
+    --primary: 33 100% 50%;
+    --primary-foreground: 0 100% 10%;
+
+    --secondary: 0 100% 27%;
+    --secondary-foreground: 40 33% 96%;
+
+    --muted: 0 30% 15%;
+    --muted-foreground: 40 20% 70%;
+
+    --accent: 51 100% 50%;
+    --accent-foreground: 0 100% 10%;
+
+    --border: 0 30% 20%;
+    --input: 0 30% 20%;
+    --ring: 33 100% 50%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-maroon-dark transition-all duration-300 shadow-soft hover:shadow-card;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-saffron-light transition-all duration-300;
+  }
+
+  .btn-gold {
+    @apply bg-gradient-gold text-maroon-dark font-semibold shadow-gold hover:scale-105 transition-all duration-300;
+  }
+
+  .card-elevated {
+    @apply bg-card rounded-xl shadow-card border border-border/50 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold to-saffron;
+  }
+
+  .decorative-border {
+    @apply border-2 border-gold/30 rounded-xl;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+}
