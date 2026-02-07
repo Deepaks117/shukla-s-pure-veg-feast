@@ -2,7 +2,7 @@
   "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://deepaks117.github.io/shukla-s-pure-veg-feast-main",
+  "homepage": "https://deepaks117.github.io/shukla-s-pure-veg-feast",
   "type": "module",
   "scripts": {
     "dev": "vite",
