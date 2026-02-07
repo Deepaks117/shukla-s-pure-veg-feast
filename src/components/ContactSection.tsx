@@ -47,16 +47,14 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const message = `
-Name: ${formData.name}
+    const message = `Name: ${formData.name}
 Phone: ${formData.phone}
 Email: ${formData.email}
 Event: ${formData.eventType}
 Guests: ${formData.guests}
-Message: ${formData.message}
-  `;
+Message: ${formData.message}`;
 
-    const whatsappUrl = `https://wa.me/918545827620?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/919214381274?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
