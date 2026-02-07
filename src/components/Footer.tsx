@@ -1,4 +1,11 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Youtube,
+} from "lucide-react";
 import Logo from "@/components/Logo";
 
 const Footer = () => {
@@ -42,8 +49,8 @@ const Footer = () => {
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6">
               शुद्ध शाकाहारी, उचित दाम, उत्तम भोजन
               <br />
-              <span className="text-gold italic">"Waah Bhai Waah"</span> – 
-              Food that makes you say wow!
+              <span className="text-gold italic">"Waah Bhai Waah"</span> – Food
+              that makes you say wow!
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
@@ -124,16 +131,17 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-saffron mt-0.5" />
                 <a
-                  href="mailto:shuklacatering@gmail.com"
+                  href="mailto:shuklacateringtiffinservices@gmail.com"
                   className="text-primary-foreground/80 hover:text-saffron transition-colors text-sm"
                 >
-                  shuklacatering@gmail.com
+                  shuklacateringtiffinservices@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-saffron mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/80 text-sm">
-                  3D/243, Aawas Vikas Hanshpuram,<br />
+                  3D/243, Aawas Vikas Hanshpuram,
+                  <br />
                   Naubasta, Kanpur – 208021, UP
                 </span>
               </li>
@@ -147,7 +155,8 @@ const Footer = () => {
         <div className="container-custom py-6 px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
             <p className="text-primary-foreground/60 text-sm">
-              © {currentYear} Shukla Catering & Tiffin Services. All rights reserved.
+              © {currentYear} Shukla Catering & Tiffin Services. All rights
+              reserved.
             </p>
             <p className="text-gold text-sm font-medium italic">
               "वाह भाई वाह – Waah Bhai Waah"

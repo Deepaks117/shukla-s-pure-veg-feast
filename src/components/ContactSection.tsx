@@ -21,8 +21,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "shuklacatering@gmail.com",
-    href: "mailto:shuklacatering@gmail.com",
+    value: "shuklacateringtiffinservices@gmail.com",
+    href: "mailto:shuklacateringtiffinservices@gmail.com",
   },
   {
     icon: MapPin,
@@ -68,7 +68,9 @@ const ContactSection = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -86,8 +88,8 @@ const ContactSection = () => {
             <span className="text-saffron"> Perfect Event</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Ready to create an unforgettable culinary experience? 
-            Get in touch with us today!
+            Ready to create an unforgettable culinary experience? Get in touch
+            with us today!
           </p>
         </div>
 
@@ -100,7 +102,11 @@ const ContactSection = () => {
                 <a
                   key={index}
                   href={info.href}
-                  target={info.icon === MapPin || info.icon === MessageCircle ? "_blank" : undefined}
+                  target={
+                    info.icon === MapPin || info.icon === MessageCircle
+                      ? "_blank"
+                      : undefined
+                  }
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-4 bg-card rounded-xl border border-border/50 hover:shadow-card hover:border-gold/30 transition-all group"
                 >
@@ -108,8 +114,12 @@ const ContactSection = () => {
                     <info.icon className="w-5 h-5 text-saffron" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary text-sm">{info.title}</h4>
-                    <p className="text-muted-foreground text-sm mt-1">{info.value}</p>
+                    <h4 className="font-semibold text-primary text-sm">
+                      {info.title}
+                    </h4>
+                    <p className="text-muted-foreground text-sm mt-1">
+                      {info.value}
+                    </p>
                   </div>
                 </a>
               ))}
@@ -121,7 +131,9 @@ const ContactSection = () => {
                 <Clock className="w-5 h-5 text-forest" />
               </div>
               <div>
-                <h4 className="font-semibold text-primary text-sm">Business Hours</h4>
+                <h4 className="font-semibold text-primary text-sm">
+                  Business Hours
+                </h4>
                 <p className="text-muted-foreground text-sm mt-1">
                   Open 7 days a week, 8:00 AM – 10:00 PM
                 </p>
@@ -152,7 +164,10 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Your Name *
                   </label>
                   <Input
@@ -166,7 +181,10 @@ const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Phone Number *
                   </label>
                   <Input
@@ -183,7 +201,10 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Email Address
                 </label>
                 <Input
@@ -199,7 +220,10 @@ const ContactSection = () => {
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="eventType" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="eventType"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Event Type *
                   </label>
                   <select
@@ -220,7 +244,10 @@ const ContactSection = () => {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="guests" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="guests"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Expected Guests
                   </label>
                   <Input
@@ -236,7 +263,10 @@ const ContactSection = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Your Message
                 </label>
                 <Textarea
